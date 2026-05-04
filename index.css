@@ -1,0 +1,167 @@
+@import url("https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&f[]=jetbrains-mono@400,500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 0 0% 98%;
+        --foreground: 0 0% 2%;
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 2%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 2%;
+        --primary: 16 100% 50%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 0 0% 92%;
+        --secondary-foreground: 0 0% 9%;
+        --muted: 0 0% 94%;
+        --muted-foreground: 0 0% 40%;
+        --accent: 0 0% 92%;
+        --accent-foreground: 0 0% 9%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 0 0% 88%;
+        --input: 0 0% 90%;
+        --ring: 16 100% 50%;
+        --radius: 0.875rem;
+    }
+
+    .dark {
+        --background: 0 0% 3%;
+        --foreground: 0 0% 98%;
+        --card: 0 0% 5%;
+        --card-foreground: 0 0% 98%;
+        --popover: 0 0% 5%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 16 100% 50%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 0 0% 10%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 0 0% 12%;
+        --muted-foreground: 0 0% 65%;
+        --accent: 0 0% 15%;
+        --accent-foreground: 0 0% 98%;
+        --destructive: 0 62% 40%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 0 0% 12%;
+        --input: 0 0% 10%;
+        --ring: 16 100% 50%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    html,
+    body,
+    #root {
+        height: 100%;
+    }
+    body {
+        @apply bg-background text-foreground antialiased;
+        font-family: "Satoshi", system-ui, -apple-system, sans-serif;
+        font-feature-settings: "ss01", "ss02";
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Clash Display", "Satoshi", sans-serif;
+        letter-spacing: -0.02em;
+    }
+    ::selection {
+        background: hsl(var(--primary));
+        color: hsl(var(--primary-foreground));
+    }
+}
+
+/* Grain / noise overlay */
+.grain::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.035;
+    background-image: radial-gradient(#fff 1px, transparent 1px);
+    background-size: 3px 3px;
+}
+
+.dark .grain::before {
+    opacity: 0.05;
+}
+
+/* Glow button */
+.btn-glow {
+    box-shadow: 0 10px 40px -8px hsl(var(--primary) / 0.45);
+    transition: all 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.btn-glow:hover {
+    box-shadow: 0 16px 50px -8px hsl(var(--primary) / 0.7);
+    transform: translateY(-2px);
+}
+
+/* Scrollbar */
+.dark ::-webkit-scrollbar { width: 10px; height: 10px; }
+.dark ::-webkit-scrollbar-track { background: transparent; }
+.dark ::-webkit-scrollbar-thumb {
+    background: hsl(0 0% 14%);
+    border-radius: 9999px;
+    border: 2px solid hsl(var(--background));
+}
+
+/* Mono label */
+.label-mono {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: hsl(var(--muted-foreground));
+}
+
+/* Shimmer */
+@keyframes shimmer {
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
+}
+.shimmer {
+    background: linear-gradient(
+        90deg,
+        hsl(var(--muted)) 0%,
+        hsl(var(--accent)) 50%,
+        hsl(var(--muted)) 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite linear;
+}
+
+/* Tracing beam for generation screen */
+@keyframes trace {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+.tracing-beam {
+    position: relative;
+    overflow: hidden;
+}
+.tracing-beam::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        hsl(var(--primary) / 0.5) 50%,
+        transparent 100%
+    );
+    animation: trace 2.2s ease-in-out infinite;
+}
+
+/* Soft reveal */
+@keyframes reveal-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.reveal-up {
+    animation: reveal-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
