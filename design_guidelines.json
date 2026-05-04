@@ -1,0 +1,123 @@
+{
+  "project_name": "AutoSite AI Pro",
+  "theme": "Dark-First, Techno-Futurist SaaS (Linear/Vercel/Framer Level)",
+  "archetype": "Archetype 4 (Swiss & High-Contrast) infused with Techno-Futurist aesthetics.",
+  "philosophy": "The product IS the design. Ultra-premium, zero-clutter, relying on architectural grids, massive contrast, asymmetric bento box layouts, and perfect typography. The accent is a high-energy Electric Vermilion to contrast the deep Obsidian base.",
+  "colors": {
+    "light_mode_css": {
+      "--background": "0 0% 98%",
+      "--foreground": "0 0% 2%",
+      "--card": "0 0% 100%",
+      "--card-foreground": "0 0% 2%",
+      "--popover": "0 0% 100%",
+      "--popover-foreground": "0 0% 2%",
+      "--primary": "16 100% 50%",
+      "--primary-foreground": "0 0% 98%",
+      "--secondary": "0 0% 90%",
+      "--secondary-foreground": "0 0% 9%",
+      "--muted": "0 0% 90%",
+      "--muted-foreground": "0 0% 45%",
+      "--accent": "0 0% 90%",
+      "--accent-foreground": "0 0% 9%",
+      "--border": "0 0% 90%",
+      "--input": "0 0% 90%",
+      "--ring": "16 100% 50%",
+      "--radius": "0.75rem"
+    },
+    "dark_mode_css": {
+      "--background": "0 0% 2%",
+      "--foreground": "0 0% 98%",
+      "--card": "0 0% 4%",
+      "--card-foreground": "0 0% 98%",
+      "--popover": "0 0% 5%",
+      "--popover-foreground": "0 0% 98%",
+      "--primary": "16 100% 50%",
+      "--primary-foreground": "0 0% 98%",
+      "--secondary": "0 0% 10%",
+      "--secondary-foreground": "0 0% 98%",
+      "--muted": "0 0% 12%",
+      "--muted-foreground": "0 0% 63%",
+      "--accent": "0 0% 15%",
+      "--accent-foreground": "0 0% 98%",
+      "--border": "0 0% 12%",
+      "--input": "0 0% 10%",
+      "--ring": "16 100% 50%"
+    },
+    "notes": "Ensure text contrast always meets APCA standards. DO NOT use generic gray. The 'Vermilion' (#FF4500) acts as the single energetic CTA trigger on a stealthy dark background."
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Clash Display, 'Cabinet Grotesk', sans-serif",
+      "body": "Satoshi, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "hierarchy_rules": {
+      "h1": "text-5xl sm:text-6xl lg:text-[5rem] tracking-tighter leading-none font-medium",
+      "h2": "text-3xl sm:text-4xl tracking-tight leading-tight font-medium",
+      "h3": "text-xl sm:text-2xl tracking-tight",
+      "body": "text-base leading-relaxed text-muted-foreground",
+      "labels": "text-xs tracking-[0.2em] uppercase font-mono text-muted-foreground"
+    },
+    "installation": "Use Fontsource or Google Fonts for Clash Display and Satoshi if available, otherwise fallback to Space Grotesk for headings and Inter for body, BUT prefer Clash Display/Satoshi heavily."
+  },
+  "layout_and_spacing": {
+    "grid_system": "The Bento Grid Protocol (Universal). Mode A 'Tetris Grid' for Marketing pages (gap-8, wide asymmetry). Mode B 'Control Room Grid' for Dashboards (gap-4, dense).",
+    "asymmetry": "Hero sections must be horizontal/asymmetrical. Avoid standard 'center everything'. Use 60/40 splits with inverted border radii or complex overlapping.",
+    "spacing": "Generous spacing. p-8 to p-12 in cards. py-32 for sections."
+  },
+  "components_strategy": {
+    "marketing_pages": "Pure HTML/Tailwind + Framer Motion. Do not use Shadcn for standard structural sections. Use raw tags for overlapping/asymmetry. Implement scroll-triggered reveals.",
+    "dashboard_and_editor": "Use Shadcn highly customized. Strip away the generic look. Use 'Glassmorphism' with backdrop-blur-xl and border-white/10 for sticky headers and overlays. Use 'Grid Borders' (technical look) for data tables and settings.",
+    "buttons": "Premium feel. Primary: bg-primary text-white shadow-[0_0_20px_rgba(255,69,0,0.4)] hover:shadow-[0_0_30px_rgba(255,69,0,0.6)] hover:-translate-y-0.5 transition-all duration-300. Secondary: bg-white/5 border border-white/10 hover:bg-white/10 backdrop-blur-md.",
+    "cards": "Dark mode cards: bg-card border border-border/50 hover:border-white/20 transition-colors. Add a subtle radial gradient highlight on hover using framer-motion or CSS pseudo-elements."
+  },
+  "media_assets": {
+    "hero_background": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/e1c69fd1-6824-4f3d-9c96-8fe0d4476348/images/d3a8d787bc7707d1ffeced298372005045854f652ec2028c1e689e03d276221b.png",
+      "description": "Ultra-premium 3D abstract geometric shape, sleek dark obsidian material with bright vermilion glowing accents. Use as absolute background in the Hero section, masked or faded at edges."
+    },
+    "texture_overlay": {
+      "url": "https://images.pexels.com/photos/13129482/pexels-photo-13129482.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Monochrome geometric texture. Use as a fixed background layer with opacity-5 and mix-blend-overlay to create a subtle premium grain/structure."
+    },
+    "template_thumbnails": [
+      {
+        "category": "Restaurant",
+        "url": "https://static.prod-images.emergentagent.com/jobs/e1c69fd1-6824-4f3d-9c96-8fe0d4476348/images/6a17f5a433325b00110b699d9270afdf8fdfaf4b15437a2ff73d2b6b87612206.png"
+      },
+      {
+        "category": "Real Estate",
+        "url": "https://static.prod-images.emergentagent.com/jobs/e1c69fd1-6824-4f3d-9c96-8fe0d4476348/images/90e080c9163f0a8eb6c9153bc56b24441d9ce4eb813f0c155f013499d2794690.png"
+      },
+      {
+        "category": "Gym & Fitness",
+        "url": "https://static.prod-images.emergentagent.com/jobs/e1c69fd1-6824-4f3d-9c96-8fe0d4476348/images/6eceeb044d8c980bb27e4d35c79fc3e217442a60c33591ca3e834ac3760e5819.png"
+      }
+    ]
+  },
+  "key_functionalities": [
+    "Landing page SaaS premium (hero asymétrique, features bento grid, templates showcase carousel, how-it-works, testimonials, CTA).",
+    "Dashboard utilisateur moderne (grid of projects with preview thumbs, create new, duplicate, version history).",
+    "Multi-step intelligent form wizard (business info, sector, location, style, colors, services, tone, sections). Use smooth framer-motion slide transitions.",
+    "AI Generation flow with premium loading states / shimmer effects.",
+    "Live preview with desktop/tablet/mobile toggle.",
+    "Site editor panel (edit text inline, change colors, add/remove sections) using a control room UI.",
+    "SEO score dashboard (0-100 circular score with checklist) using custom SVG or Recharts.",
+    "Export ZIP button with success micro-interaction.",
+    "Dark/light mode toggle (both themes strictly polished, dark mode default).",
+    "Premium templates showcase for 15 sectors, utilizing provided thumbnail URLs."
+  ],
+  "accessibility_and_testing": {
+    "requirements": "All interactive and key informational elements MUST include a 'data-testid' attribute (e.g., data-testid='generate-site-button'). Ensure hover and focus states provide high contrast via APCA standards. Respect prefers-reduced-motion."
+  },
+  "instructions_to_main_agent": [
+    "1. Setup Tailwind using the exact CSS variables provided. Configure dark mode to 'class'.",
+    "2. Install and use lucide-react for icons.",
+    "3. Use Framer Motion for scroll reveals (fade-up) and the multi-step wizard transitions.",
+    "4. Build the Marketing page first with an asymmetric hero, embedding the `hero_background` image with a dark gradient overlay (e.g., bg-gradient-to-r from-background via-background/80 to-transparent) so text is 100% readable.",
+    "5. For the AI Generation Flow, build a high-end shimmer/pulse loading screen. Do NOT use standard spinners. Use skeleton layouts that pulse with a 'Tracing Beam' or subtle gradients.",
+    "6. Build the Site Editor Panel using a sleek, dense 'Control Room' sidebar (Mode B Grid) and a large central Live Preview.",
+    "7. Include all 10 key functionalities fully built and styled.",
+    "8. Add data-testid to EVERY button, link, and form field."
+  ]
+}
